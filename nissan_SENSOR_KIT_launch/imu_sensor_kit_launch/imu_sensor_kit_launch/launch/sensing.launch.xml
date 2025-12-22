@@ -1,0 +1,11 @@
+<launch>
+  <arg name="launch_driver" default="true" description="do launch driver"/>
+  <arg name="sensor_model" default="imu_sensor_kit" description="sensor model name"/>
+
+  <group>
+    <push-ros-namespace namespace="sensing"/>
+    <include file="$(find-pkg-share imu_sensor_kit_launch)/launch/imu.launch.xml">
+      <arg name="launch_driver" value="$(var launch_driver)"/>
+    </include>
+  </group>
+</launch>

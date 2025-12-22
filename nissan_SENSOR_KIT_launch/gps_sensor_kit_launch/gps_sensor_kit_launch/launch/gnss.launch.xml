@@ -1,0 +1,9 @@
+<launch>
+  <arg name="launch_driver" default="true"/>
+
+  <group>
+    <push-ros-namespace namespace="gnss"/>
+    <!-- Placeholder for GNSS/GPS driver launch -->
+    <!-- <include file="$(find-pkg-share some_gnss_driver)/launch/driver.launch.xml"/> -->
+  </group>
+</launch>
